@@ -1,4 +1,4 @@
-var push = require('web-push')
+import push from 'web-push'
 
 let vapIDKeys = {
     publicKey: 'BFagtQKIJv3RTemYCIivpH2u5w0iQweXErrxBcfpgElaDofdd7yQS90mU598OcIcdikzyZbdf7FZtUTDWMRfG4s',
