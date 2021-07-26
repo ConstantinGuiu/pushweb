@@ -3,12 +3,12 @@ const webpush = require('web-push');
 // VAPID keys should only be generated only once.
 const vapidKeys = {
   publicKey:
-    'BBZY7Q3KEtZArAAWMLi_qzWHbH4vAoqPpIXnRhmlUaw0PVs1Kt_2fgLhuaVI5i8MWASBKx3d6W6UoH2U3qChw9U',
-  privateKey: 'CZtf_JUxmXkCKbzwaKedPPO9BFC99U2rk-GUYDbYAa8'
+    'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg',
+  privateKey: 'wAAl5DChlifY5pygC7iQNzdn5WoT_A6YaFJRDNapXfo'
 };
 
 webpush.setVapidDetails(
-  'mailto:example@yourdomain.org',
+  'mailto:guiu_costin_2009@yahoo.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
