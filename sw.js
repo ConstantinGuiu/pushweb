@@ -14,5 +14,5 @@ self.addEventListener('push', () => {
         icon: 'images/xmark.png'},
     ]
   };
-  self.registration.showNotification('Hello Jeannette!', options);
+  self.registration.showNotification('We have CTAs now!', options);
 });
