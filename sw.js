@@ -6,7 +6,13 @@ self.addEventListener('push', () => {
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    }
+    },
+    actions: [
+      {action: 'explore', title: 'See your FL notifications',
+        icon: 'images/checkmark.png'},
+      {action: 'close', title: 'I don\'t want any of this',
+        icon: 'images/xmark.png'},
+    ]
   };
   self.registration.showNotification('Hello Jeannette!', options);
 });
