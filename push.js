@@ -14,6 +14,6 @@ push.setVapidDetails(
 );
 
 // This is the same output of calling JSON.stringify on a PushSubscription
-const pushSubscription = { endpoint: "https://wns2-db5p.notify.windows.com/w/?token=BQYAAACcDK4NTAckFY3doPe0s4OhmbBcimPj8VsC76xSfrKxqnRGidNjh8Lcf03si%2fYXqmynsKTF1W2fmeOy%2fVvXqZaoUsc3j4otcSdxucC%2bsA2VaNX1hRkagWrygbFiTvFuwFXFm0h%2bs%2f0i3hiSL9UD4kGu46KMA7v2WBwhwvh34Avfw6T2p0ozkTpbu9fARU8TafWBb24BTzKSeHR8k2ryHc2ZDFfbtjhZShLcSLasXf4pXrOO1AgkdV6yJYk1EypByKVx96iFdD6abOgRymVSXXV%2fm4JUwgpLlie7TIf1PVImD6UwncdIMvBAk7l%2fCGF598Jp3INchi7Y%2ffKgPp14slue", keys: { auth: "-wz0CAKxQT6Kig3zFTEB-Q", p256dh: "BM1LXwt9j1OvSYMiOLfhpXl6U5nQf32HUx_IirLQGiEygn811xolfPPYp1kJ01spAw2Kt3iRwNbwfotWGxVtCJ4" } };
+const pushSubscription = { endpoint: "https://fcm.googleapis.com/fcm/send/eYnjui28IMM:APA91bF3sIvYNDM-gVpW4spExtjLp3592MqzlukvFfyBA9YWmqa07xk4PanuL4sxi4YhFW5RRCuOmsjkr4DOBOqz26MeX7dJl4YfYS1_9vlfhN3uAZ4THGhqY0lA4Es7Jj-KF9Cmn2NL", keys: { auth: "FRfxTAAwqlUEezTk_JsBtQ", p256dh: "BA8b9wn26-4Jnk1wRHsl10FMWvbaF4aIi7oSqLXypNCimVvi6cJi4vdBQIKe5eP4bGWtWNDCabOG_oOu8cu7RDk" } };
 
 push.sendNotification(pushSubscription, 'Your Push Payload Text');
