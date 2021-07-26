@@ -1,5 +1,5 @@
 self.addEventListener('push', () => {
-  var options = {
+  let options = {
     body: 'Here is a notification body!',
     icon: 'images/example.png',
     vibrate: [100, 50, 100],
