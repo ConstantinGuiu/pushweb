@@ -8,7 +8,7 @@ const vapidKeys = {
 };
 
 push.setVapidDetails(
-  'mailto:guiu_costin_2009@yahoo.com',
+  'mailto:example@mail.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
