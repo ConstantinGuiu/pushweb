@@ -6,17 +6,7 @@ self.addEventListener('push', () => {
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore', title: 'See your FL notifications',
-        icon: 'images/checkmark.png'
-      },
-      {
-        action: 'close', title: 'Close notification',
-        icon: 'images/xmark.png'
-      },
-    ]
+    }
   };
   self.registration.showNotification('We have CTAs now!', options);
 });
