@@ -8,5 +8,5 @@ self.addEventListener('push', () => {
       primaryKey: 1
     }
   };
-  self.registration.showNotification('Hello there, world!', options);
+  self.registration.showNotification('Hello Jeannette!', options);
 });
