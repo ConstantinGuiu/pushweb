@@ -8,7 +8,7 @@
   </head>
   <body>
     <button onclick="subscribe()">Subscribe</button>
-    <textarea id="myTextarea"></textarea>
+    <p id="output">Code here</p>
     <script>
       async function subscribe() {
         let sw = await navigator.serviceWorker.ready;
@@ -18,7 +18,7 @@
             'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg'
         });
         console.log(JSON.stringify(push));
-        document.getElementById('myTextarea').value = JSON.stringify(push)
+        document.getElementById('output').innerHTML = JSON.stringify(push)
       }
 
       if ('serviceWorker' in navigator) {
