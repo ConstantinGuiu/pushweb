@@ -10,6 +10,7 @@
 
 <body>
   <button onclick="subscribe()">Subscribe</button>
+  <p id="keys">Code here</p>
   <p id="output">Code here</p>
   <script>
     if (Notification.permission !== "granted") {
@@ -25,7 +26,12 @@
           'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg'
       });
       console.log(JSON.stringify(push));
-      document.getElementById('output').innerHTML = JSON.stringify(push)
+      document.getElementById('keys').innerHTML = JSON.stringify(push)
+      if (Notification.permission !== "granted") {
+      document.getElementById("output").innerHTML = "Notifications enabled"
+    } else {
+      document.getElementById("output").innerHTML = "Notifications disabled after check"
+    }
     }
 
     if ('serviceWorker' in navigator) {

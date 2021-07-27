@@ -1,6 +1,6 @@
 self.addEventListener('push', () => {
   let options = {
-    body: 'Here is a notification body!',
+    body: 'You have new activity on Frontliners',
     icon: 'https://staging.frontliners.ai/img/logo.png',
     vibrate: [100, 50, 100],
     data: {
@@ -8,7 +8,7 @@ self.addEventListener('push', () => {
       primaryKey: 1
     }
   };
-  self.registration.showNotification('We have CTAs now!', options);
+  self.registration.showNotification('We have CTA now!', options);
 });
 
 self.addEventListener('notificationclick', function (e) {
@@ -18,7 +18,7 @@ self.addEventListener('notificationclick', function (e) {
   if (action === 'close') {
     notification.close();
   } else {
-    clients.openWindow('https://staging.frontliners.ai/owner/');
+    clients.openWindow('https://friendly-bose-2c9c03.netlify.app/');
     notification.close();
   }
 });
