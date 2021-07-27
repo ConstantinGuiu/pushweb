@@ -23,8 +23,12 @@
       // console.log(navigator)
       // console.log("navigator.serviceWorker")
       // console.log(navigator.serviceWorker)
-      console.log("navigator.serviceWorker.ready.pushManager")
-      await console.log(navigator.serviceWorker.ready.pushManager)
+      // console.log("navigator.serviceWorker.ready.pushManager")
+      // await console.log(navigator.serviceWorker.ready.pushManager)
+
+      let sw = await navigator.serviceWorker.ready;
+      let push = await sw.pushManager
+      console.log(push)
     }
 
     async function subscribe() {
