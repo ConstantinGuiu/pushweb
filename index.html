@@ -9,19 +9,26 @@
 </head>
 
 <body>
-  <button onclick="subscribe()">Subscribe</button>
+  <div style="display: flex;">
+    <button onclick="subscribe()">Subscribe</button>
+    <button onclick="checkStatus()">Check notifications status</button>
+  </div>
   <p id="keys">Keys</p>
   <div style="border-bottom: 1px solid black; width: 500px;"></div>
   <p id="output">Output</p>
   <script>
-    async function subscribe() {
-      let sw = await navigator.serviceWorker.ready;
+
+    function checkStatus() {
       console.log("navigator")
       console.log(navigator)
       console.log("navigator.serviceWorker")
       console.log(navigator.serviceWorker)
       console.log("navigator.serviceWorker.ready")
       console.log(navigator.serviceWorker.ready)
+    }
+
+    async function subscribe() {
+      let sw = await navigator.serviceWorker.ready;
       let push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey:
