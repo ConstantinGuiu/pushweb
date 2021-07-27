@@ -27,7 +27,11 @@
       // await console.log(navigator.serviceWorker.ready.pushManager)
 
       let sw = await navigator.serviceWorker.ready;
-      let push = await sw.pushManager.permissionState()
+      let push = await sw.pushManager.permissionState({
+        userVisibleOnly: true,
+        applicationServerKey:
+          'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg'
+      })
       console.log(push)
     }
 
