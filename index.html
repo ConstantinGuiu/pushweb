@@ -13,13 +13,15 @@
   <p id="keys">Code here</p>
   <p id="output">Code here</p>
   <script>
-    if (Notification.permission !== "granted") {
-      document.getElementById("output").innerHTML = "Notifications enabled"
-    } else {
-      document.getElementById("output").innerHTML = "Notifications disabled"
-    }
     async function subscribe() {
       let sw = await navigator.serviceWorker.ready;
+      console.log("navigator")
+      console.log(navigator)
+      console.log("navigator.serviceWorker")
+      console.log(navigator.serviceWorker)
+      console.log(navigator)
+      console.log("navigator.serviceWorker.ready")
+      console.log(navigator.serviceWorker.ready)
       let push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey:
@@ -27,11 +29,6 @@
       });
       console.log(JSON.stringify(push));
       document.getElementById('keys').innerHTML = JSON.stringify(push)
-      if (Notification.permission !== "granted") {
-      document.getElementById("output").innerHTML = "Notifications enabled"
-    } else {
-      document.getElementById("output").innerHTML = "Notifications disabled after check"
-    }
     }
 
     if ('serviceWorker' in navigator) {
