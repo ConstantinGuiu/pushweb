@@ -27,7 +27,7 @@
       // await console.log(navigator.serviceWorker.ready.pushManager)
 
       let sw = await navigator.serviceWorker.ready;
-      let push = await sw.pushManager
+      let push = await sw.pushManager.permissionState()
       console.log(push)
     }
 
