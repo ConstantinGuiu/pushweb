@@ -10,8 +10,9 @@
 
 <body>
   <button onclick="subscribe()">Subscribe</button>
-  <p id="keys">Code here</p>
-  <p id="output">Code here</p>
+  <p id="keys">Keys</p>
+  <div style="border-bottom: 1px solid black; width: 500px;"></div>
+  <p id="output">Output</p>
   <script>
     async function subscribe() {
       let sw = await navigator.serviceWorker.ready;
@@ -19,7 +20,6 @@
       console.log(navigator)
       console.log("navigator.serviceWorker")
       console.log(navigator.serviceWorker)
-      console.log(navigator)
       console.log("navigator.serviceWorker.ready")
       console.log(navigator.serviceWorker.ready)
       let push = await sw.pushManager.subscribe({
