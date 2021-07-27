@@ -18,7 +18,15 @@
   <p id="output">Output</p>
   <script>
 
+    subscribe()
+
     async function checkStatus() {
+      console.log("navigator")
+      console.log(navigator)
+      console.log("navigator.serviceWorker")
+      console.log(navigator.serviceWorker)
+      console.log("navigator.serviceWorker.ready.pushManager")
+      await console.log(navigator.serviceWorker.ready.pushManager)
 
       let sw = await navigator.serviceWorker.ready;
       let push = await sw.pushManager.permissionState({
@@ -26,6 +34,7 @@
         applicationServerKey:
           'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg'
       })
+      console.log(typeof push, push)
       document.getElementById('output').innerHTML = JSON.stringify(push)
     }
 
@@ -35,9 +44,9 @@
         userVisibleOnly: true,
         applicationServerKey:
           'BD7RSrBfL3DH-kaCIPiDX-q4Pt7j9-bX1eOg7k1BmE64SXYFpSq7JUD5eDFC1XSdJUI3xgL3llOFdFYlvDZWNfg'
-        });
-        // console.log(JSON.stringify(push));
-        document.getElementById('keys').innerHTML = JSON.stringify(push)
+      });
+      // console.log(JSON.stringify(push));
+      document.getElementById('keys').innerHTML = JSON.stringify(push)
     }
 
     if ('serviceWorker' in navigator) {
