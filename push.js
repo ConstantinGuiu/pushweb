@@ -14,6 +14,6 @@ push.setVapidDetails(
 );
 
 // This is the same output of calling JSON.stringify on a PushSubscription
-const pushSubscription = { endpoint: "https://fcm.googleapis.com/fcm/send/dyqtqFGY398:APA91bFwK6tdWFIkRMmrY0ZarNEeAuQUFkVOGBkbC_LeOyR-5fwGlcSdGwE6roXAqCVyVwkNkoy4eq7D62nGMJOTukK_0TOnClLYHWwtd1elT9NH7LP7B8Q9n_vv5FNfcuq9xPwWy5Vb", keys: { auth: "-hDvPk1Hr6P4bgMISk2SzQ", p256dh: "BAgzWhy2fZimD0KJhItZhtzZEQXzutqwYrsF4XD3GlcgzRFZajk0qCFylT-c6X27Nyp24nJWVFerLB5-HryQeVE" } };
+const pushSubscription = { endpoint: "https://fcm.googleapis.com/fcm/send/f0U9saGG0Is:APA91bEmCx5XLPg4F2-JRVQSDGnuouGDUwdYrdaswu2SKk16K_1cBTCR5V_598Jbm15xstKYGQELXGwJhudIQGeMrz7tg3qS5tI7hPPO-FRFpFc3QjL_P6GnzcoRRf5TbFoSDX4UJGQC", keys: { auth: "QnWOGL0pDh6iIea-UQnmDQ", p256dh: "BLJjuI6nCZaCiUdOoev0euLPOMWqgWNLCZ_zvHawSxjqik8c0Dd1ml-LnfyGTxtp_anWvvJkJYU_VO8euKqjXHA" } };
 
 push.sendNotification(pushSubscription, 'Your Push Payload Text');
